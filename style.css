@@ -1,0 +1,310 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.body {
+	background-image: url(img/mash.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+/* header */
+nav {
+	width: 100%;
+	height: 3rem;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	padding: 10px 80px;
+	background-color: #34495e;
+	/*#040b14*/
+	padding: 10px 80px;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.links ul {
+	display: flex;
+}
+
+.links a {
+	display: inline-block;
+	padding: 20px 30px;
+	color: #fff;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	height: 10px;
+	line-height: .5;
+	transition: 0.3s;
+	position: relative;
+}
+
+.hamburger-menu {
+	display: none;
+}
+
+main {
+	display: flex;
+	min-height: 95vh;
+	align-items: center;
+	justify-content: center;
+}
+
+#form-group {
+	position: relative;
+	width: 500px;
+	padding: 20px 40px;
+	text-transform: uppercase;
+	background-color: #ffff;
+	border-radius: 14px;
+
+}
+
+.input-group label {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.input-group input,
+textarea {
+	display: block;
+	width: 100%;
+	padding: 6px;
+	font-size: 15px;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: .25rem;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.success input {
+	border: 2.5px green solid;
+}
+
+.success textarea {
+	border: 2.5px green solid;
+}
+
+.error input {
+	/*border: 2px yellow solid;*/
+	border: 2px red solid;
+}
+
+.error textarea {
+	/*border: 2px yellow solid;*/
+	border: 2px red solid;
+}
+
+.input-group i {
+	position: absolute;
+	right: 5px;
+	top: 40px;
+	visibility: hidden;
+}
+
+.success i.fa-check-circle {
+	visibility: visible;
+	color: green;
+}
+
+.error i.fa-exclamation-circle {
+	visibility: visible;
+	color: red;
+}
+
+.input-group p {
+	font-size: 13px;
+	font-weight: 600;
+	color: red;/*yellow*/
+	margin-bottom: 8px;
+	visibility: hidden;
+}
+
+.error p {
+	visibility: visible;
+	color: red;/*yellow*/
+}
+
+.footer {
+	position: fixed;
+	justify-content: center;
+	text-align: center;
+	font-weight: 500;
+	outline: none;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	line-height: 40px;
+	background-color: dimgray;
+	color: #fff
+}
+
+/*table*/
+.tables {
+	padding: 5rem 4rem;
+	text-align: center;
+}
+
+.form-group {
+   display: block;
+	align-items: flex-start;
+	text-align: left;
+}
+.rows {
+	margin-bottom: 20px;
+}
+
+@media (max-width: 850px) {
+	.body {
+		overflow-x: hidden;
+	}
+
+	.1-header {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+	}
+
+	.nav {
+		height: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: 700;
+	}
+
+	.links {
+		position: fixed;
+		width: 40%;
+		height: 50vh;
+		padding: 2rem;
+		top: 40px;
+		right: -100%;
+		background-color: #34495e;
+		border-top-left-radius: 9px;
+		border-bottom-left-radius: 9px;
+		transition: all .5s;
+	}
+
+	#navbar {
+		position: relative;
+		color: #fff;
+	}
+
+	.links ul {
+		flex-direction: column;
+		margin: 1rem;
+		width: 100%;
+		right: 0;
+	}
+
+	.links a {
+		color: #ffff;
+		padding-top: 2rem;
+		transition: 0.5s;
+	}
+
+	.show {
+		right: 0;
+	}
+
+	.hamburger-menu {
+		position: fixed;
+		display: block;
+		right: 70px;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 700;
+		cursor: pointer;
+		transition: 0.5s;
+	}
+
+	.tables {
+		padding: 4rem 2rem;
+		text-align: center;
+		font-size: 15px;
+	}
+
+}
+
+@media (max-width: 560px) {
+
+	.links {
+		width: 50%;
+	}
+
+
+	.show {
+		right: 0;
+	}
+
+
+	.hamburger-menu {
+		right: 50px;
+	}
+
+	main {
+		display: flex;
+		min-height: 95vh;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#form-group {
+		width: 350px;
+		padding: 20px 30px;
+	}
+
+	.input-group label {
+		margin-bottom: 1px;
+	}
+
+	.input-group input,
+	textarea {
+		width: 100%;
+		padding: 4px;
+		font-size: 13px;
+	}
+
+	.tables {
+		padding: 4rem 7px;
+		justify-content: space-between;
+		text-align: center;
+		font-size: 15px;
+	}
+
+	.btn {
+		font-size: 15px;
+		padding: 4px 9px;
+	}
+}
